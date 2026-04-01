@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🕐 De Klok - NL / العربية / Türkçe / Afaan Oromo</title>
+<title>🕐 De Klok - NL / EN / PS / AR / TR / OR</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
   *{margin:0;padding:0;box-sizing:border-box}
@@ -94,6 +94,8 @@
 
 <div class="lang-tabs">
   <button class="lang-tab active" onclick="switchLang('nl',this)"><span class="flag">🇳🇱</span> Nederlands</button>
+  <button class="lang-tab" onclick="switchLang('en',this)"><span class="flag">🇬🇧</span> English</button>
+  <button class="lang-tab" onclick="switchLang('ps',this)"><span class="flag">🇦🇫</span> پښتو</button>
   <button class="lang-tab" onclick="switchLang('ar',this)"><span class="flag">🇸🇦</span> العربية</button>
   <button class="lang-tab" onclick="switchLang('tr',this)"><span class="flag">🇹🇷</span> Türkçe</button>
   <button class="lang-tab" onclick="switchLang('om',this)"><span class="flag">🇪🇹</span> Afaan Oromo</button>
@@ -416,6 +418,52 @@ const L = {
       <p>In het Nederlands lezen we de klok anders dan in veel andere talen. We gebruiken <b>het volgende uur</b> als referentiepunt zodra de grote wijzer de 3 passeert (kwart over). Dat betekent dat we bij 6:25 zeggen: <em>"vijf voor <b>half zeven</b>"</em> — we kijken vooruit naar 7!</p>
       <p>We gebruiken altijd <b>stappen van vijf minuten</b>: 5 over, 10 over, kwart over, 10 voor half, 5 voor half, half, 5 over half, 10 over half, kwart voor, 10 voor, 5 voor.</p>
       <div class="tip-box"><div class="tip-icon">⚠️</div><div><b>Let op:</b> "Half zeven" = 6:30, <b>niet</b> 7:30! In het Nederlands: "half zeven" = we zijn <em>halverwege</em> naar zeven.</div></div>`
+  },
+  en: {
+    title:'🕐 What time is it?', sub:'Reading the clock in Dutch',
+    top:'▲ The current hour', bottom:'▼ HALF + next hour',
+    qOT:'OVER', qOS1:'over = past', qOS2:'(5, 10, kwart over)',
+    qVT:'VOOR HALF', qVS1:'voor half = to half', qVS2:'(10, 5 voor half)',
+    qHT:'OVER HALF', qHS1:'over half = past half', qHS2:'(5, 10 over half)',
+    qFT:'VOOR', qFS1:'voor = to', qFS2:'(kwart, 10, 5 voor)',
+    o12:'... uur (o\'clock)',o1:'5 over (past)',o2:'10 over (past)',o3:'kwart over (quarter past)',
+    o4:'10 voor half (10 to half)',o5:'5 voor half (5 to half)',o6:'half (half)',
+    o7:'5 over half (5 past half)',o8:'10 over half (10 past half)',o9:'kwart voor (quarter to)',
+    o10:'10 voor (to)',o11:'5 voor (to)',
+    lO:'OVER (past)',lV:'VOOR HALF (to half)',lH:'OVER HALF (past half)',lF:'VOOR (to)',
+    exT:'Example: from 6 o\'clock to 7 o\'clock',
+    anaT:'🕐 10 examples using an analog clock',
+    eAT:'✏️ Exercise A — Digital clock (multiple choice)',eAS:'You see the digital clock. What do you say in Dutch?',
+    eBT:'✏️ Exercise B — Analog clock (multiple choice)',eBS:'You see the analog clock. What do you say in Dutch?',
+    expl:`<h2>📖 How does the clock work in Dutch?</h2>
+      <p>In Dutch, we read the clock differently. Once the minute hand passes the 15-minute mark (kwart over), we use <b>the next hour</b> as our reference point. At 6:25 we say: <em>"vijf voor <b>half zeven</b>"</em> — we look ahead to 7!</p>
+      <p><b>Important rules:</b></p>
+      <p>• <b>over</b> = past &nbsp; • <b>voor</b> = to &nbsp; • <b>half</b> = half (to the next hour) &nbsp; • <b>kwart</b> = quarter</p>
+      <div class="tip-box"><div class="tip-icon">⚠️</div><div><b>Attention!</b> "Half zeven" = 6:30, <b>not</b> 7:30! "half zeven" means we are <em>halfway</em> to seven.</div></div>`
+  },
+  ps: {
+    title:'🕐 څو بجې دي؟', sub:'په هالنډي ژبه کې د ساعت لوستل',
+    top:'▲ اوسنی ساعت', bottom:'▼ HALF + راتلونکی ساعت',
+    qOT:'OVER', qOS1:'over = تېر', qOS2:'(5, 10, kwart over)',
+    qVT:'VOOR HALF', qVS1:'voor half = تر نیمې مخکې', qVS2:'(10, 5 voor half)',
+    qHT:'OVER HALF', qHS1:'over half = له نیمې تېر', qHS2:'(5, 10 over half)',
+    qFT:'VOOR', qFS1:'voor = پاتې', qFS2:'(kwart, 10, 5 voor)',
+    o12:'... uur (بجې)',o1:'5 over (تېر)',o2:'10 over (تېر)',o3:'kwart over (پاو تېر)',
+    o4:'10 voor half (تر نیمې 10 مخکې)',o5:'5 voor half (تر نیمې 5 مخکې)',o6:'half (نیمه)',
+    o7:'5 over half (له نیمې 5 تېر)',o8:'10 over half (له نیمې 10 تېر)',o9:'kwart voor (پاو پاتې)',
+    o10:'10 voor (پاتې)',o11:'5 voor (پاتې)',
+    lO:'OVER (تېر)',lV:'VOOR HALF (تر نیمې مخکې)',lH:'OVER HALF (له نیمې تېر)',lF:'VOOR (پاتې)',
+    exT:'بېلګه: د ۶ بجو څخه تر ۷ بجو پورې',
+    anaT:'🕐 د ستن لرونکي ساعت سره 10 بېلګې',
+    eAT:'✏️ د الف تمرین — ډیجیټل ساعت (انتخابي)',eAS:'تاسو ډیجیټل ساعت ګورئ. په هالنډي ژبه کې څه وایئ؟',
+    eBT:'✏️ د ب تمرین — ستن لرونکی ساعت (انتخابي)',eBS:'تاسو د ساعت ستنې ګورئ. په هالنډي ژبه کې څه وایئ؟',
+    expl:`<h2>📖 ساعت په هالنډي ژبه کې څنګه کار کوي؟</h2>
+      <div class="rtl">
+      <p>په هالنډي ژبه کې، موږ ساعت په بل ډول لولو. کله چې ۱۵ دقیقې تېرې شي، موږ <b>راتلونکی ساعت</b> د مرجع په توګه کاروو. په 6:25 کې موږ وایو: <em>"vijf voor <b>half zeven</b>"</em> يعني موږ 7 ته ګورو!</p>
+      <p><b>مهم اصول:</b></p>
+      <p>• <b>over</b> = تېر &nbsp; • <b>voor</b> = پاتې &nbsp; • <b>half</b> = نیمه &nbsp; • <b>kwart</b> = پاو</p>
+      <div class="tip-box"><div class="tip-icon">⚠️</div><div><b>پاملرنه!</b> "Half zeven" = ۶:۳۰، نه ۷:۳۰! "half zeven" مانا دا ده چې 7 بجو ته نیمه لاره ده.</div></div>
+      </div>`
   },
   ar: {
     title:'🕐 كم الساعة؟', sub:'قراءة الساعة باللغة الهولندية',
