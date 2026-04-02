@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🕐 De Klok - NL / EN / PS / AR / TR / OR</title>
+<title>🕐 De Klok - NL / EN / PS / ZH / AR / TR / OR</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
   *{margin:0;padding:0;box-sizing:border-box}
@@ -96,6 +96,7 @@
   <button class="lang-tab active" onclick="switchLang('nl',this)"><span class="flag">🇳🇱</span> Nederlands</button>
   <button class="lang-tab" onclick="switchLang('en',this)"><span class="flag">🇬🇧</span> English</button>
   <button class="lang-tab" onclick="switchLang('ps',this)"><span class="flag">🇦🇫</span> پښتو</button>
+  <button class="lang-tab" onclick="switchLang('zh',this)"><span class="flag">🇨🇳</span> 中文</button>
   <button class="lang-tab" onclick="switchLang('ar',this)"><span class="flag">🇸🇦</span> العربية</button>
   <button class="lang-tab" onclick="switchLang('tr',this)"><span class="flag">🇹🇷</span> Türkçe</button>
   <button class="lang-tab" onclick="switchLang('om',this)"><span class="flag">🇪🇹</span> Afaan Oromo</button>
@@ -464,6 +465,28 @@ const L = {
       <p>• <b>over</b> = تېر &nbsp; • <b>voor</b> = پاتې &nbsp; • <b>half</b> = نیمه &nbsp; • <b>kwart</b> = پاو</p>
       <div class="tip-box"><div class="tip-icon">⚠️</div><div><b>پاملرنه!</b> "Half zeven" = ۶:۳۰، نه ۷:۳۰! "half zeven" مانا دا ده چې 7 بجو ته نیمه لاره ده.</div></div>
       </div>`
+  },
+  zh: {
+    title:'🕐 现在几点了？', sub:'用荷兰语读时间',
+    top:'▲ 当前小时', bottom:'▼ HALF + 下个小时',
+    qOT:'OVER', qOS1:'over = 过', qOS2:'(5, 10, kwart over)',
+    qVT:'VOOR HALF', qVS1:'voor half = 差...到半', qVS2:'(10, 5 voor half)',
+    qHT:'OVER HALF', qHS1:'over half = 过半...', qHS2:'(5, 10 over half)',
+    qFT:'VOOR', qFS1:'voor = 差', qFS2:'(kwart, 10, 5 voor)',
+    o12:'... uur (点)',o1:'5 over (过5分)',o2:'10 over (过10分)',o3:'kwart over (一刻/15分)',
+    o4:'10 voor half (差10分到半)',o5:'5 voor half (差5分到半)',o6:'half (半)',
+    o7:'5 over half (过5分多半)',o8:'10 over half (过10分多半)',o9:'kwart voor (差一刻)',
+    o10:'10 voor (差10分)',o11:'5 voor (差5分)',
+    lO:'OVER (过)',lV:'VOOR HALF (差...到半)',lH:'OVER HALF (过...半)',lF:'VOOR (差)',
+    exT:'例子：从 6点 到 7点',
+    anaT:'🕐 10个时钟的例子',
+    eAT:'✏️ 练习 A — 数字时钟 (选择题)',eAS:'你看到了数字时钟。用荷兰语怎么说？',
+    eBT:'✏️ 练习 B — 模拟时钟 (选择题)',eBS:'你看到了带指针的时钟。用荷兰语怎么说？',
+    expl:`<h2>📖 荷兰语的时钟是怎么工作的？</h2>
+      <p>在荷兰语中，我们读时间的方式有所不同。当分针过了15分钟 (kwart over) 之后，我们就使用<b>下一个小时</b>作为参考点。在 6:25 我们会说：<em>"vijf voor <b>half zeven</b>"（差五分半道七点）</em> — 我们已经开始看向7点了！</p>
+      <p><b>重要规则：</b></p>
+      <p>• <b>over</b> = 过 &nbsp; • <b>voor</b> = 差 / 提前 &nbsp; • <b>half</b> = 半 (指通向下一个小时的一半) &nbsp; • <b>kwart</b> = 一刻 (15分)</p>
+      <div class="tip-box"><div class="tip-icon">⚠️</div><div><b>注意！</b> "Half zeven" = 6:30，<b>不是</b> 7:30！"half zeven" 意味着我们到7点才走了一半。</div></div>`
   },
   ar: {
     title:'🕐 كم الساعة؟', sub:'قراءة الساعة باللغة الهولندية',
